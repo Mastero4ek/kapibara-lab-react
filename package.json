@@ -1,6 +1,7 @@
 {
   "name": "kapibara",
   "version": "0.1.0",
+  "homepage": "https://mastero4ek.github.io/kapibara-lab-react/",
   "private": true,
   "dependencies": {
     "@craco/craco": "^7.1.0",
@@ -14,6 +15,7 @@
     "@types/react-dom": "^18.2.8",
     "axios": "^1.5.1",
     "dotenv": "^16.4.5",
+    "gh-pages": "^6.1.1",
     "react": "^18.2.0",
     "react-animations": "^1.0.0",
     "react-dom": "^18.2.0",
@@ -27,9 +29,11 @@
   },
   "scripts": {
     "start": "craco start",
+    "deploy": "npm run build && npm run build-gh-pages",
     "build": "craco build",
     "test": "craco test",
-    "eject": "craco eject"
+    "eject": "craco eject",
+    "build-gh-pages": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [

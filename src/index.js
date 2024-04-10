@@ -12,7 +12,7 @@ if (rootElem) {
   const root = ReactDOM.createRoot(rootElem);
 
   root.render(
-    <BrowserRouter>
+    <BrowserRouter basename='/kapibara-lab-react/'>
       <React.StrictMode>
         <Provider store={store}>
           <App />
