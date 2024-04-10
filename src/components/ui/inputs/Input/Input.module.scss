@@ -1,0 +1,64 @@
+@import '../../../../styles/mixins.scss';
+
+.root {
+    position: relative;
+
+    input {
+        width: 28rem;
+        padding: 1.2rem 1.6rem;
+        @include font(400, 2.1rem, 140%);
+        background-color: #FFFFFF;
+        border-radius: .8rem;
+        border: .2rem solid transparent;
+        transition: all .15s ease-in;
+
+        &:focus {
+            border: .2rem solid #737BE1;
+        }
+
+        &:disabled {
+            pointer-events: none;
+            opacity: 0.5;
+        }
+    }
+
+    span {
+        display: inline-block;
+        width: 100%;
+        text-align: left;
+        @include font(400, 1.2rem, 140%);
+        position: absolute;
+        bottom: 6rem;
+        left: 0;
+        color: #E17373;
+    }
+}
+
+@media (min-width:120em) {
+    .root {
+        input {
+            width: 280px;
+            padding: 12px 16px;
+            @include font(400, 21px, 140%);
+            border-radius: 8px;
+            border: 2px solid transparent;
+
+            &:focus {
+                border: 2px solid #737BE1;
+            }
+        }
+    }
+}
+
+@media (max-width:48em) {
+    .root {
+        width: 100%;
+
+        input {
+            width: 100%;
+            padding: 1.6rem 2.6rem;
+            @include font(400, 3.2rem, 140%);
+            border-radius: 1.6rem;
+        }
+    }
+}

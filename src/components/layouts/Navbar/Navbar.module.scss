@@ -1,0 +1,60 @@
+@import '../../../styles/mixins.scss';
+
+.root {
+    display: flex;
+    align-items: center;
+    gap: 2.4rem;
+
+    li {
+        a {
+            padding: .8rem 2.4rem;
+            border-radius: .4rem;
+            @include font(500, 1.8rem, 130%);
+            transition: all .15s ease-in;
+
+            span {
+                pointer-events: none;
+                transition: all .15s ease-in;
+                color: #000000;
+            }
+        }
+    }
+}
+
+.linkActive {
+    background-color: #E9EAF9;
+
+    ~span {
+        color: #4F58C9;
+    }
+}
+
+@media (min-width:120em) {
+    .root {
+        gap: 24px;
+
+        li {
+            a {
+                padding: 8px 24px;
+                border-radius: 4px;
+                @include font(500, 18px, 130%);
+            }
+        }
+    }
+}
+
+@media (min-width:48em) {
+    .root {
+        li {
+            a {
+                &:hover {
+                    background-color: #E9EAF9;
+
+                    span {
+                        color: #4F58C9;
+                    }
+                }
+            }
+        }
+    }
+}

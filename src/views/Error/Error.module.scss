@@ -1,0 +1,220 @@
+@import '../../styles/mixins.scss';
+
+.root {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+
+    a {
+        svg {
+            display: none;
+        }
+    }
+
+    div {
+        @include font(600, 20rem, 140%);
+        color: #000000;
+        opacity: 0.5;
+        animation: glitch 1s linear infinite;
+    }
+
+    div:before,
+    div:after {
+        content: attr(title);
+        position: absolute;
+        left: 0;
+    }
+
+    div:before {
+        animation: glitchTop 1s linear infinite;
+        clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+    }
+
+    div:after {
+        animation: glitchBotom 1.5s linear infinite;
+        clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+        -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+    }
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.2rem 1.8rem;
+    border-radius: 0.8rem;
+    gap: 1rem;
+    transition: all .15s ease-in;
+    background-color: #737BE1;
+
+    span {
+        color: #FFFFFF;
+        transition: all .15s ease-in;
+        @include font(400, 2.1rem, 140%);
+    }
+
+    &:disabled {
+        pointer-events: none;
+        opacity: 0.5;
+        background-color: #4C4C4C;
+    }
+}
+
+@keyframes glitch {
+
+    2%,
+    64% {
+        transform: translate(.2rem, 0) skew(0deg);
+    }
+
+    4%,
+    60% {
+        transform: translate(-.2rem, 0) skew(0deg);
+    }
+
+    62% {
+        transform: translate(0, 0) skew(5deg);
+    }
+}
+
+@keyframes glitchTop {
+
+    2%,
+    64% {
+        transform: translate(.2rem, -.2rem);
+    }
+
+    4%,
+    60% {
+        transform: translate(-.2rem, .2rem);
+    }
+
+    62% {
+        transform: translate(1.3rem, -.1rem) skew(-13deg);
+    }
+}
+
+@keyframes glitchBotom {
+
+    2%,
+    64% {
+        transform: translate(-.2rem, 0);
+    }
+
+    4%,
+    60% {
+        transform: translate(-.2rem, 0);
+    }
+
+    62% {
+        transform: translate(-2.2rem, .5rem) skew(21deg);
+    }
+}
+
+@media (min-width:120em) {
+    .root {
+        gap: 20px;
+        padding-top: 100px;
+        padding-bottom: 100px;
+
+        div {
+            @include font(600, 200px, 140%);
+        }
+    }
+
+    @keyframes glitch {
+
+        2%,
+        64% {
+            transform: translate(2px, 0) skew(0deg);
+        }
+
+        4%,
+        60% {
+            transform: translate(-2px, 0) skew(0deg);
+        }
+
+        62% {
+            transform: translate(0, 0) skew(5deg);
+        }
+    }
+
+    @keyframes glitchTop {
+
+        2%,
+        64% {
+            transform: translate(2px, -2px);
+        }
+
+        4%,
+        60% {
+            transform: translate(-2px, 2px);
+        }
+
+        62% {
+            transform: translate(13px, -1px) skew(-13deg);
+        }
+    }
+
+    @keyframes glitchBotom {
+
+        2%,
+        64% {
+            transform: translate(-2px, 0);
+        }
+
+        4%,
+        60% {
+            transform: translate(-2px, 0);
+        }
+
+        62% {
+            transform: translate(-22px, 5px) skew(21deg);
+        }
+    }
+
+    .btn {
+        padding: 12px 18px;
+        border-radius: 8px;
+        gap: 10px;
+
+        span {
+            @include font(400, 21px, 140%);
+        }
+    }
+}
+
+@media (min-width:48em) {
+    .btn {
+        &:hover {
+            transform: scale(1.05);
+            background-color: lighten($color: #737BE1, $amount: 5);
+        }
+
+        &:active {
+            transform: scale(.95);
+            background-color: darken($color: #737BE1, $amount: 5);
+        }
+    }
+}
+
+@media (max-width:48em) {
+    .root {
+        gap: 4rem;
+    }
+
+    .btn {
+        padding: 2rem 3.2rem;
+        border-radius: 1.6rem;
+        gap: 1.75rem;
+
+        span {
+            @include font(400, 3.2rem, 140%);
+        }
+    }
+}

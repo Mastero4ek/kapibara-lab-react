@@ -1,0 +1,112 @@
+@import '../../../styles/mixins.scss';
+
+.root {
+    display: flex;
+    flex-direction: column;
+    gap: 4.4rem;
+    align-items: center;
+    text-align: center;
+    border-radius: .8rem;
+    overflow: hidden;
+    padding: 4.8rem 0;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(233, 234, 255, 1) 0%, rgba(245, 245, 255, 1) 100%);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 4.4rem;
+
+    p {
+        margin: 0 auto;
+        width: 102rem;
+        @include font(400, 2.1rem, 140%);
+    }
+}
+
+.controls {
+    width: 88rem;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 4.4rem 1.9rem;
+    position: relative;
+
+    strong {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        @include font(400, 1.6rem, 140%);
+        position: absolute;
+        bottom: 6.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #E17373;
+    }
+}
+
+@media (min-width:120em) {
+    .root {
+        gap: 44px;
+        border-radius: 8px;
+        padding: 48px 0;
+    }
+
+    .content {
+        gap: 44px;
+
+        p {
+            width: 1020px;
+            @include font(400, 21px, 140%);
+        }
+    }
+
+    .controls {
+        width: 880px;
+        gap: 44px 19px;
+
+        strong {
+            @include font(400, 16px, 140%);
+            bottom: 65px;
+        }
+    }
+}
+
+@media (max-width:48em) {
+    .root {
+        align-items: flex-start;
+        gap: 6.4rem;
+        text-align: left;
+        border-radius: 0;
+        padding: 6.8rem 3.2rem;
+    }
+
+    .content {
+        gap: 6.4rem;
+
+        p {
+            width: 100%;
+            @include font(400, 3.2rem, 140%);
+        }
+    }
+
+    .controls {
+        width: 100%;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: unset;
+        gap: 4.2rem;
+
+        strong {
+            @include font(400, 2.6rem, 140%);
+            bottom: 10rem;
+        }
+    }
+
+    .btn {
+        margin-top: 3rem;
+    }
+}

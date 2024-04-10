@@ -1,0 +1,105 @@
+@import '../../../styles/mixins.scss';
+
+.root {
+    padding: 4.8rem 0;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(233, 234, 255, 1) 0%, rgba(245, 245, 255, 1) 100%);
+}
+
+.wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.content {
+    position: relative;
+    width: 102rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3.6rem;
+
+    p {
+        @include font(400, 2.1rem, 140%);
+
+        span {
+            display: inline-block;
+
+            &:nth-of-type(1) {
+                margin-bottom: 1.8rem;
+            }
+        }
+    }
+}
+
+.image {
+    position: absolute;
+    right: -38rem;
+    top: 0;
+    overflow: hidden;
+    border-radius: .8rem;
+    width: 33.2rem;
+    height: auto;
+}
+
+@media (min-width:120em) {
+    .root {
+        padding: 48px 0;
+    }
+
+    .content {
+        width: 1020px;
+        gap: 36px;
+
+        p {
+            @include font(400, 21px, 140%);
+
+            span {
+                &:nth-of-type(1) {
+                    margin-bottom: 18px;
+                }
+            }
+        }
+    }
+
+    .image {
+        border-radius: 8px;
+        width: 332px;
+        right: -380px;
+    }
+}
+
+@media (max-width:48em) {
+    .root {
+        padding: 6.3rem 0;
+    }
+
+    .wrapper {
+        flex-direction: column;
+        align-items: center;
+        justify-content: unset;
+    }
+
+    .content {
+        width: 100%;
+        gap: 4.2rem;
+
+        p {
+            @include font(400, 3.2rem, 140%);
+
+            span {
+                &:nth-of-type(1) {
+                    margin-bottom: 2.7rem;
+                }
+            }
+        }
+    }
+
+    .image {
+        position: relative;
+        right: auto;
+        top: auto;
+        border-radius: 1.6rem;
+        width: 100%;
+    }
+}

@@ -1,0 +1,76 @@
+@import '../../../../styles/mixins.scss';
+
+.root {
+    cursor: default;
+}
+
+.wrapper {
+    padding: 18.15rem 0;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(233, 234, 255, 1) 0%, rgba(245, 245, 255, 1) 100%);
+}
+
+.content {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.4rem;
+
+    span {
+        width: 61.2rem;
+        @include font(600, 2.4rem, 140%);
+        color: #737BE1;
+    }
+}
+
+.image {
+    width: 9rem;
+    height: 9rem;
+}
+
+@media (min-width:120em) {
+    .wrapper {
+        padding: 181.5px 0;
+    }
+
+    .content {
+        gap: 24px;
+
+        span {
+            width: 612px;
+            @include font(600, 24px, 140%);
+        }
+    }
+
+    .image {
+        width: 90px;
+        height: 90px;
+    }
+}
+
+@media (max-width:48em) {
+    .wrapper {
+        padding: 18.15rem 5.5rem;
+        background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(233, 234, 255, 1) 0%, rgba(245, 245, 255, 1) 100%);
+    }
+
+    .content {
+        margin: 0 auto;
+        flex-direction: column;
+        align-items: center;
+        justify-content: unset;
+        gap: 3rem;
+
+        span {
+            text-align: center;
+            width: 100%;
+            @include font(600, 3.2rem, 140%);
+            color: #737BE1;
+        }
+    }
+
+    .image {
+        width: 16rem;
+        height: 16rem;
+    }
+}

@@ -1,0 +1,79 @@
+@import '../../../../styles/mixins.scss';
+
+.root {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.2rem 1.8rem;
+    border-radius: 0.8rem;
+    gap: 1rem;
+    transition: all .15s ease-in;
+    background-color: #737BE1;
+
+    span {
+        color: #FFFFFF;
+        transition: all .15s ease-in;
+        @include font(400, 2.1rem, 140%);
+    }
+
+    svg {
+        width: 2.4rem;
+        height: 2.4rem;
+        transition: all .15s ease-in;
+        stroke: #FFFFFF;
+    }
+
+    &:disabled {
+        pointer-events: none;
+        opacity: 0.5;
+        background-color: #4C4C4C;
+    }
+}
+
+@media (min-width:120em) {
+    .root {
+        padding: 12px 18px;
+        border-radius: 8px;
+        gap: 10px;
+
+        span {
+            @include font(400, 21px, 140%);
+        }
+
+        svg {
+            width: 24px;
+            height: 24px;
+        }
+    }
+}
+
+@media (min-width:48em) {
+    .root {
+        &:hover {
+            transform: scale(1.05);
+            background-color: lighten($color: #737BE1, $amount: 5);
+        }
+
+        &:active {
+            transform: scale(.95);
+            background-color: darken($color: #737BE1, $amount: 5);
+        }
+    }
+}
+
+@media (max-width:48em) {
+    .root {
+        padding: 2rem 3.2rem;
+        border-radius: 1.6rem;
+        gap: 1.75rem;
+
+        span {
+            @include font(400, 3.2rem, 140%);
+        }
+
+        svg {
+            width: 4.5rem;
+            height: 4.5rem;
+        }
+    }
+}

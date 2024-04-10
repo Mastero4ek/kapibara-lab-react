@@ -1,0 +1,166 @@
+@import '../../styles/mixins.scss';
+
+.root {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5.4rem 0;
+}
+
+.logo {
+    width: 40rem;
+    display: flex;
+    align-items: center;
+    gap: 2.4rem;
+
+    a {
+        display: block;
+
+        img {
+            width: 19.4rem;
+            height: auto;
+        }
+    }
+
+    span {
+        @include font(400, 1.4rem, 130%);
+        color: #4C4C4C;
+    }
+}
+
+.contacts {
+    a {
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+        color: #000000;
+
+        svg {
+            width: 4.2rem;
+            height: 4.2rem;
+            stroke: #737BE1;
+            transition: all .15s ease-in;
+        }
+    }
+}
+
+.contactsContent {
+    b {
+        transition: all .15s ease-in;
+        display: block;
+        @include font(600, 1.8rem, 130%);
+    }
+
+    span {
+        display: block;
+        @include font(400, 1.4rem, 130%);
+        color: #4C4C4C;
+    }
+}
+
+@media (min-width:120em) {
+    .root {
+        padding: 54px 0;
+    }
+
+    .logo {
+        width: 400px;
+        gap: 24px;
+
+        a {
+            img {
+                width: 194px;
+            }
+        }
+
+        span {
+            @include font(400, 14px, 130%);
+        }
+    }
+
+    .linkActive {
+        background-color: #E9EAF9;
+
+        span {
+            color: #4F58C9;
+        }
+    }
+
+    .contacts {
+        a {
+            gap: 5px;
+
+            svg {
+                width: 42px;
+                height: 42px;
+            }
+        }
+    }
+
+    .contactsContent {
+        b {
+            @include font(600, 18px, 130%);
+        }
+
+        span {
+            @include font(400, 14px, 130%);
+        }
+    }
+}
+
+@media (min-width:48em) {
+    .contacts {
+        a:hover {
+            svg {
+                stroke: lighten($color: #737BE1, $amount: 5);
+            }
+
+            div {
+                b {
+                    color: #737BE1;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:48em) {
+    .root {
+        padding: 5.4rem 0;
+    }
+
+    .logo {
+        width: auto;
+        flex-direction: column;
+        align-items: unset;
+        gap: .5rem;
+
+        a {
+            display: block;
+
+            img {
+                width: 34.5rem;
+                height: auto;
+            }
+        }
+
+        span {
+            @include font(400, 2.13rem, 130%);
+        }
+    }
+
+    .contacts {
+        a {
+            gap: .5rem;
+
+            svg {
+                width: 7.5rem;
+                height: 7.5rem;
+            }
+        }
+    }
+
+    .contactsContent {
+        display: none;
+    }
+}

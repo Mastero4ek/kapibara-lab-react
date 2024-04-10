@@ -1,0 +1,120 @@
+@import '../../../styles/mixins.scss';
+
+.root {
+    background-image: url('../../../assets/image/intro/background.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.wrapper {
+    padding-top: 21rem;
+    padding-bottom: 18.4rem;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.image {
+    position: absolute;
+    width: 36.7rem;
+    height: auto;
+    bottom: -.23rem;
+    right: 12.5rem;
+}
+
+.title {
+    @include font(700, 4.8rem, auto);
+
+    strong {
+        @include font(700, 4.8rem, auto);
+        padding: 1.2rem 1.8rem;
+        border-radius: .8rem .8rem .8rem 0;
+        display: block;
+        background-color: #737BE1;
+        color: #FFFFFF;
+    }
+
+    span {
+        width: fit-content;
+        padding: 1.2rem 1.8rem;
+        border-radius: 0 0 .8rem .8rem;
+        display: block;
+        background-color: #FFFFFF;
+        color: #737BE1;
+    }
+}
+
+@media (min-width:120em) {
+    .wrapper {
+        padding-top: 210px;
+        padding-bottom: 184px;
+    }
+
+    .image {
+        width: 367px;
+        right: 125px;
+        bottom: -2.3px;
+    }
+
+    .title {
+        @include font(700, 48px, auto);
+
+        strong {
+            @include font(700, 48px, auto);
+            padding: 12px 18px;
+            border-radius: 8px 8px 8px 0;
+        }
+
+        span {
+            padding: 12px 18px;
+            border-radius: 0 0 8px 8px;
+        }
+    }
+}
+
+@media (max-width:48em) {
+    .root {
+        background-image: url('../../../assets/image/intro/background.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .wrapper {
+        padding-top: 2rem;
+        padding-bottom: 0;
+        flex-direction: column-reverse;
+        justify-content: unset;
+    }
+
+    .image {
+        position: relative;
+        width: 30.7rem;
+        height: auto;
+        bottom: 0;
+        right: auto;
+        margin: 0 auto;
+    }
+
+    .title {
+        z-index: 100;
+        width: 100%;
+        position: absolute;
+        bottom: -8.15rem;
+        @include font(700, 4.3rem, auto);
+
+        strong {
+            width: 100%;
+            @include font(700, 4.3rem, auto);
+            padding: 1.45rem 2.5rem;
+            border-radius: 1.2rem 1.2rem 1.2rem 0;
+        }
+
+        span {
+            background-color: #E9EAF9;
+            padding: 1.45rem 2.5rem;
+            border-radius: 0 0 1.2rem 1.2rem;
+        }
+    }
+}
