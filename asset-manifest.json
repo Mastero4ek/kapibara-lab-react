@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/kapibara-lab-react/static/css/main.8ea5ab61.css",
-    "main.js": "/kapibara-lab-react/static/js/main.9ecbc94e.js",
+    "main.css": "/kapibara-lab-react/static/css/main.eb34ee45.css",
+    "main.js": "/kapibara-lab-react/static/js/main.298f3bc9.js",
     "static/media/background.png": "/kapibara-lab-react/static/media/background.c794dda5900492608809.png",
     "static/media/lab1.png": "/kapibara-lab-react/static/media/lab1.2bad3de084210312c01c.png",
     "static/media/Montserrat-BlackItalic.eot": "/kapibara-lab-react/static/media/Montserrat-BlackItalic.e885010b57eaa0bc6e3e.eot",
@@ -70,11 +70,11 @@
     "static/media/icons.svg": "/kapibara-lab-react/static/media/icons.ad9b4c4bf9340a4e7ca655e7a6e6166d.svg",
     "index.html": "/kapibara-lab-react/index.html",
     "static/media/checkmark.svg": "/kapibara-lab-react/static/media/checkmark.b7faf72ef7973f034464e1e44653831e.svg",
-    "main.8ea5ab61.css.map": "/kapibara-lab-react/static/css/main.8ea5ab61.css.map",
-    "main.9ecbc94e.js.map": "/kapibara-lab-react/static/js/main.9ecbc94e.js.map"
+    "main.eb34ee45.css.map": "/kapibara-lab-react/static/css/main.eb34ee45.css.map",
+    "main.298f3bc9.js.map": "/kapibara-lab-react/static/js/main.298f3bc9.js.map"
   },
   "entrypoints": [
-    "static/css/main.8ea5ab61.css",
-    "static/js/main.9ecbc94e.js"
+    "static/css/main.eb34ee45.css",
+    "static/js/main.298f3bc9.js"
   ]
 }
