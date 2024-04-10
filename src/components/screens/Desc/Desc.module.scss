@@ -4,11 +4,19 @@
     @include font(600, 2.4rem, 140%);
     font-style: italic;
     text-align: center;
+
+    div {
+        height: 6.72rem;
+    }
 }
 
 @media (min-width:120em) {
     .root {
         @include font(600, 24px, 140%);
+
+        div {
+            height: 67.2px;
+        }
     }
 }
 
@@ -16,5 +24,9 @@
     .root {
         padding-top: 5.5rem;
         @include font(600, 3.2rem, 140%);
+
+        div {
+            height: 31.62rem;
+        }
     }
 }
